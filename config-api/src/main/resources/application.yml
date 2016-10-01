@@ -1,0 +1,6 @@
+---
+spring:
+  config:
+    server:
+      git:
+        uri: https://github.com/leosilvadev/distributed_store_config.git
