@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: products-api
+  cloud:
+    config:
+      uri: http://localhost:9000
+      failFast: true
