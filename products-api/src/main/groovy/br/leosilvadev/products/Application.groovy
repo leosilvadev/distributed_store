@@ -1,14 +1,14 @@
-package br.leosilvadev
+package br.leosilvadev.products;
 
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient
 
 @SpringBootApplication
 @EnableEurekaClient
-class ProductsApiApplication {
+class Application {
 
 	static void main(String[] args) {
-		SpringApplication.run ProductsApiApplication, args
+		SpringApplication.run Application.class, args
 	}
 }

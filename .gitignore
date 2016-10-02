@@ -2,6 +2,7 @@ bin/
 build/
 
 .metadata/
+.cache-main
 .project
 .classpath
 .recommenders/
