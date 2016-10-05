@@ -7,15 +7,15 @@ import br.leosilvadev.products.domains.Product
 class RegistrationRequest {
 
 	@NotNull
-	String name;
+	String name
 
 	@NotNull
-	String description;
+	String description
 
 	@NotNull
-	BigDecimal price;
+	BigDecimal price
 
-	public Product toDomain() {
-		return new Product(name, description, price)
+	Product toDomain() {
+		new Product(name, description, price)
 	}
 }

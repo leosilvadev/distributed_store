@@ -33,7 +33,7 @@ class Controller {
 
 	@RequestMapping(method=RequestMethod.POST)
 	def register(@RequestBody @Valid RegistrationRequest request) {
-		Product product = request.toDomain()
+		def product = request.toDomain()
 		productRepository.save(product)
 		ResponseEntity.created(linkTo(Controller).slash(product.id).toUri()).build()
 	}
