@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: establishments-api
+  cloud:
+    config:
+      uri: http://localhost:9000
+      failFast: true
