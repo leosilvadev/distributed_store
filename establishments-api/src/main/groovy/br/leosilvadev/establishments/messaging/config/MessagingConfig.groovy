@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration
 class MessagingConfig {
 	
 	final static String USER_REGISTRATION = "fanout.establishments.registered"
-	
+		
 	@Bean
 	Queue queueRegisterConfig() {
 		new Queue('queue.establishment_config.register')
