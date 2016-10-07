@@ -20,13 +20,13 @@ class ProductRegistrar {
 		(validate >> save)(product)
 	}
 	
-	private validate = { product ->
-		establishmentClient.find(product.establishmentId)
-		product
+	private validate = {
+		establishmentClient.find(it.establishmentId)
+		it
 	}
 	
-	private save = { product ->
-		productRepository.save product
-		product
+	private save = {
+		productRepository.save it
+		it
 	}
 }
