@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
 import org.springframework.web.bind.annotation.RestController
 
-import br.leosilvadev.establishments.establishment.repositories.EstablishmentRepository
+import br.leosilvadev.establishments.establishment.services.EstablishmentFinder
 import br.leosilvadev.establishments.establishment.services.EstablishmentRegistrar
 
 @RestController
@@ -20,7 +20,7 @@ import br.leosilvadev.establishments.establishment.services.EstablishmentRegistr
 class Controller {
 
 	@Autowired
-	EstablishmentRepository establishmentRepository
+	EstablishmentFinder establishmentFinder
 
 	@Autowired
 	EstablishmentRegistrar establishmentRegistrar
@@ -34,6 +34,6 @@ class Controller {
 
 	@RequestMapping(value="/{id}",method=RequestMethod.GET)
 	def get(@PathVariable String id) {
-		ResponseEntity.ok(establishmentRepository.findOne(id))
+		ResponseEntity.ok(establishmentFinder.find(id))
 	}
 }
