@@ -14,7 +14,7 @@ import org.springframework.data.mongodb.core.mapping.Field
 
 @EqualsAndHashCode
 @ToString
-@Document
+@Document(collection="establishments")
 class Establishment {
 
 	@Id
