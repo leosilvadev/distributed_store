@@ -1,4 +1,4 @@
-package br.leosilvadev.establishments.domains
+package br.leosilvadev.establishments.establishment.domains
 
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString

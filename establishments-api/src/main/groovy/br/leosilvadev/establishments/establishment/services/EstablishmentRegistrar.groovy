@@ -1,11 +1,10 @@
-package br.leosilvadev.establishments.registrars
+package br.leosilvadev.establishments.establishment.services
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
-import br.leosilvadev.establishments.domains.Establishment
-import br.leosilvadev.establishments.messaging.notifiers.EstablishmentRegisteredNotifier
-import br.leosilvadev.establishments.repositories.EstablishmentRepository
+import br.leosilvadev.establishments.establishment.domains.Establishment
+import br.leosilvadev.establishments.establishment.repositories.EstablishmentRepository
 
 @Service
 class EstablishmentRegistrar {

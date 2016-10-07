@@ -1,11 +1,11 @@
-package br.leosilvadev.establishments.v1
+package br.leosilvadev.establishments.establishment.v1
 
 import javax.validation.constraints.NotNull
 import javax.validation.constraints.Size
 
 import org.hibernate.validator.constraints.Email
 
-import br.leosilvadev.establishments.domains.Establishment
+import br.leosilvadev.establishments.establishment.domains.Establishment
 
 class RegistrationRequest {
 

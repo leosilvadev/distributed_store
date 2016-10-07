@@ -1,4 +1,4 @@
-package br.leosilvadev.establishments.messaging.config
+package br.leosilvadev.establishments.config
 
 import org.springframework.amqp.core.Binding
 import org.springframework.amqp.core.BindingBuilder
@@ -7,10 +7,10 @@ import org.springframework.amqp.core.Queue
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
+import br.leosilvadev.establishments.constants.Messaging
+
 @Configuration
 class MessagingConfig {
-	
-	final static String USER_REGISTRATION = "fanout.establishments.registered"
 		
 	@Bean
 	Queue queueRegisterConfig() {
@@ -24,7 +24,7 @@ class MessagingConfig {
 	
 	@Bean
 	FanoutExchange fanout() {
-		new FanoutExchange(USER_REGISTRATION)
+		new FanoutExchange(Messaging.USER_REGISTRATION)
 	}
 
 	@Bean

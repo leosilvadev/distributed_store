@@ -1,4 +1,4 @@
-package br.leosilvadev.establishments.v1
+package br.leosilvadev.establishments.establishment.v1
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.*
 
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
 import org.springframework.web.bind.annotation.RestController
 
-import br.leosilvadev.establishments.registrars.EstablishmentRegistrar
-import br.leosilvadev.establishments.repositories.EstablishmentRepository
+import br.leosilvadev.establishments.establishment.repositories.EstablishmentRepository
+import br.leosilvadev.establishments.establishment.services.EstablishmentRegistrar
 
 @RestController
 @RequestMapping('/v1/establishments')
