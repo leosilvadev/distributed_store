@@ -1,4 +1,4 @@
-package br.leosilvadev.users.domains
+package br.leosilvadev.users.establishment_user.domains
 
 import java.time.LocalDateTime
 
@@ -8,11 +8,13 @@ import org.apache.commons.lang.RandomStringUtils
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 
-@Document(collection='customer_users')
-class CustomerUser {
+@Document(collection='establishment_users')
+class EstablishmentUser {
 
 	@Id
 	String id
+	
+	String name
 	
 	@NotNull
 	String email
@@ -32,14 +34,14 @@ class CustomerUser {
 	@NotNull
 	LocalDateTime lastUpdateDatetime
 	
-	CustomerUser() {
+	EstablishmentUser() {
 		this.active = Boolean.TRUE
 		this.blocked = Boolean.TRUE
 		this.registrationDatetime = LocalDateTime.now()
 		this.lastUpdateDatetime = LocalDateTime.now()
 	}
 	
-	CustomerUser(String email) {
+	EstablishmentUser(String email) {
 		this()
 		this.email = email
 		this.password = RandomStringUtils.random(6)

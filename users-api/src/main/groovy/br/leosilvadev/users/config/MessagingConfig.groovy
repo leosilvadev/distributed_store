@@ -1,4 +1,4 @@
-package br.leosilvadev.users.messaging.config
+package br.leosilvadev.users.config
 
 import org.springframework.amqp.core.Queue
 import org.springframework.amqp.rabbit.connection.ConnectionFactory
@@ -7,13 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
-import br.leosilvadev.users.messaging.consumers.UserRegistrationConsumer
+import br.leosilvadev.users.establishment_user.services.EstablishmentUserRegistrationConsumer;
 
 @Configuration
 class MessagingConfig {
 
 	@Autowired
-	UserRegistrationConsumer userRegistrationConsumer
+	EstablishmentUserRegistrationConsumer userRegistrationConsumer
 	
 	@Bean
 	Queue queueRegisterUser() {

@@ -1,4 +1,4 @@
-package br.leosilvadev.users.messaging.consumers
+package br.leosilvadev.users.establishment_user.services
 
 import groovy.json.JsonSlurper
 
@@ -7,11 +7,11 @@ import org.springframework.amqp.core.MessageListener
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 
-import br.leosilvadev.users.domains.EstablishmentUser
-import br.leosilvadev.users.repositories.EstablishmentUserRepository
+import br.leosilvadev.users.establishment_user.domains.EstablishmentUser
+import br.leosilvadev.users.establishment_user.repositories.EstablishmentUserRepository;
 
 @Component
-class UserRegistrationConsumer implements MessageListener {
+class EstablishmentUserRegistrationConsumer implements MessageListener {
 
 	@Autowired
 	EstablishmentUserRepository establishmentUserRepository
