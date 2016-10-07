@@ -1,4 +1,4 @@
-package br.leosilvadev.plans.enumerations
+package br.leosilvadev.plans.plan.domains
 
 enum PaymentStatus {
 

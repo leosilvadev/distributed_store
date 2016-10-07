@@ -1,4 +1,4 @@
-package br.leosilvadev.plans.domains
+package br.leosilvadev.plans.type.domains
 
 import java.time.LocalDateTime;
 

@@ -1,11 +1,9 @@
-package br.leosilvadev.plans.domains
+package br.leosilvadev.plans.plan.domains
 
 import java.time.LocalDate
 import java.time.LocalDateTime
 
 import javax.validation.constraints.NotNull
-
-import br.leosilvadev.plans.enumerations.PaymentStatus
 
 class Payment {
 

@@ -2,7 +2,7 @@ package br.leosilvadev.plans.type.v1
 
 import javax.validation.constraints.NotNull
 
-import br.leosilvadev.plans.domains.PlanType
+import br.leosilvadev.plans.type.domains.PlanType
 
 class RegistrationRequest {
 
