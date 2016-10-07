@@ -1,11 +1,11 @@
 package br.leosilvadev.establishments.establishment.v1
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.*
+import static org.springframework.http.ResponseEntity.*
 
 import javax.validation.Valid
 
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
@@ -29,11 +29,12 @@ class Controller {
 	def register(@RequestBody @Valid RegistrationRequest request) {
 		def establishment = request.toDomain()
 		establishmentRegistrar.register establishment
-		ResponseEntity.created(linkTo(Controller).slash(establishment.id).toUri()).build()
+		created(linkTo(Controller).slash(establishment.id).toUri()).build()
 	}
 
 	@RequestMapping(value="/{id}",method=RequestMethod.GET)
 	def get(@PathVariable String id) {
-		ResponseEntity.ok(establishmentFinder.find(id))
+		def result = establishmentFinder.find(id)
+		result.isPresent() ? ok(result.get()) : notFound().build()
 	}
 }

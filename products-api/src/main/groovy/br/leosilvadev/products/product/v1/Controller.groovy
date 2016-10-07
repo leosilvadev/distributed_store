@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestBody
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
 import org.springframework.web.bind.annotation.RequestParam
@@ -32,8 +33,8 @@ class Controller {
 	}
 
 	@RequestMapping(method=RequestMethod.POST)
-	def register(@RequestBody @Valid RegistrationRequest request) {
-		def product = request.toDomain()
+	def register(@RequestHeader(value="X-Establishment-Id") String establishmentId, @RequestBody @Valid RegistrationRequest request) {
+		def product = request.toDomain(establishmentId)
 		productRegistrar.register product
 		ResponseEntity.created(linkTo(Controller).slash(product.id).toUri()).build()
 	}

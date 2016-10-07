@@ -15,7 +15,7 @@ class RegistrationRequest {
 	@NotNull
 	BigDecimal price
 
-	Product toDomain() {
-		new Product(name, description, price)
+	Product toDomain(String establishmentId) {
+		new Product(name, description, price, establishmentId)
 	}
 }
