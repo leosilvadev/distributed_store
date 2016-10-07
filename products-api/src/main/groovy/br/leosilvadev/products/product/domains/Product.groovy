@@ -1,4 +1,4 @@
-package br.leosilvadev.products.domains
+package br.leosilvadev.products.product.domains
 
 import java.time.LocalDateTime
 
@@ -8,7 +8,7 @@ import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 import org.springframework.data.mongodb.core.mapping.Field
 
-@Document
+@Document(collection="products")
 class Product {
 
 	@Id
@@ -39,6 +39,6 @@ class Product {
 		this()
 		this.name = name
 		this.description = description
-		this.prices = Arrays.asList(new ProductPrice(price))
+		this.prices = [new ProductPrice(price)]
 	}
 }

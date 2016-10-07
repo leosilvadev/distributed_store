@@ -1,12 +1,9 @@
-package br.leosilvadev.products.domains
+package br.leosilvadev.products.product.domains
 
 import java.time.LocalDateTime
 
 import javax.validation.constraints.NotNull
 
-import org.springframework.data.mongodb.core.mapping.Document
-
-@Document(collection="products")
 class ProductPrice {
 
 	@NotNull

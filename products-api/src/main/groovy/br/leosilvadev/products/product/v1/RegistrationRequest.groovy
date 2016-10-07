@@ -1,8 +1,8 @@
-package br.leosilvadev.products.v1
+package br.leosilvadev.products.product.v1
 
 import javax.validation.constraints.NotNull
 
-import br.leosilvadev.products.domains.Product
+import br.leosilvadev.products.product.domains.Product
 
 class RegistrationRequest {
 
